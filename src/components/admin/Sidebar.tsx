@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutDashboard, Home, Briefcase, Star, LogOut } from "lucide-react";
+import { Home, Briefcase, Star, LogOut, ExternalLink } from "lucide-react";
 
 const navItems = [
-  { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/home", label: "Home Content", icon: Home },
   { href: "/admin/projects", label: "Projects", icon: Briefcase },
   { href: "/admin/experience", label: "Experience", icon: Star },
@@ -45,6 +44,15 @@ export default function Sidebar() {
             </Link>
           );
         })}
+        <a
+          href="/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-gray-400 transition-colors hover:bg-neutral-900 hover:text-white"
+        >
+          <ExternalLink size={16} />
+          View Portfolio
+        </a>
       </nav>
 
       <div className="border-t border-neutral-800 p-3">
