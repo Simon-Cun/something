@@ -7,20 +7,24 @@ import query from "@tanstack/eslint-plugin-query";
 
 export default [
   {
-    ignores: ["dist/*"],
+    ignores: [
+      "dist/*",
+      ".next/",
+      "out/",
+      "node_modules/",
+      "next-env.d.ts",
+      "*.config.*js",
+    ],
   },
   { files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
-  {
-    ignores: [".next/", "out/", "node_modules"],
-  },
   { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
   { languageOptions: { globals: { ...globals.node } } },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   {
     plugins: {
-      react: react,
-      prettier: prettier,
+      react,
+      prettier,
       "@typescript-eslint": tseslint.plugin,
       "@tanstack/query": query,
     },
@@ -33,8 +37,5 @@ export default [
         { allowShortCircuit: true, allowTernary: true },
       ],
     },
-  },
-  {
-    ignores: ["*.config.*js"],
   },
 ];

@@ -1,0 +1,32 @@
+import HorizontalTitle from "@/components/HorizontalTitle";
+import ExperienceCard from "@/components/ExperienceCard";
+
+export type ExperienceItem = {
+  id: number;
+  title: string;
+  role: string;
+  location: string;
+  dateRange: string;
+  information: string[];
+  logoUrl: string;
+};
+
+const Experience = ({ experiences }: { experiences: ExperienceItem[] }) => {
+  return (
+    <section
+      id="experience"
+      className="relative flex w-full flex-col items-center justify-center py-20"
+    >
+      <div className="absolute bottom-0 left-0 h-px w-full bg-linear-to-r from-transparent via-white to-transparent" />
+
+      <HorizontalTitle title="Experience" />
+      <div className="mt-20 flex w-[80%] flex-col gap-y-8">
+        {experiences.map((item) => (
+          <ExperienceCard key={item.id} {...item} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Experience;
