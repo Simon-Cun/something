@@ -5,6 +5,7 @@ import Home from "@/components/Home";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
+import ViewTracker from "@/components/ViewTracker";
 import { prisma } from "@/lib/db";
 
 const Page = async () => {
@@ -57,9 +58,10 @@ const Page = async () => {
 
   return (
     <div className="flex flex-col items-center">
+      <ViewTracker />
       <Home {...home} />
-      <Projects projects={projects} />
       <Experience experiences={experiences} />
+      <Projects projects={projects} />
       <Footer />
     </div>
   );

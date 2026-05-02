@@ -17,6 +17,7 @@ model HomeContent {
   email        String   @default("simoncun2586@gmail.com")
   resumeUrl    String   @default("")
   profileImage String   @default("")
+  totalViews   Int      @default(0)
   updatedAt    DateTime @updatedAt
 }
 

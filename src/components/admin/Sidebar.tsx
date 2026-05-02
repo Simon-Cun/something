@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Home, Briefcase, Star, LogOut, ExternalLink } from "lucide-react";
+import { Home, Briefcase, Star, LogOut, ExternalLink, LayoutDashboard } from "lucide-react";
 
 const navItems = [
+  { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/home", label: "Home Content", icon: Home },
-  { href: "/admin/projects", label: "Projects", icon: Briefcase },
   { href: "/admin/experience", label: "Experience", icon: Star },
+  { href: "/admin/projects", label: "Projects", icon: Briefcase },
 ];
 
 export default function Sidebar() {
