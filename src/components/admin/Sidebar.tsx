@@ -2,7 +2,14 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Home, Briefcase, Star, LogOut, ExternalLink, LayoutDashboard } from "lucide-react";
+import {
+  Home,
+  Briefcase,
+  Star,
+  LogOut,
+  ExternalLink,
+  LayoutDashboard,
+} from "lucide-react";
 
 const navItems = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },

@@ -38,9 +38,7 @@ export default async function DashboardPage() {
       <Sidebar />
       <main className="flex-1 overflow-auto p-8">
         <h1 className="mb-1 text-2xl font-bold text-white">Dashboard</h1>
-        <p className="mb-8 text-sm text-gray-500">
-          Overview of your portfolio
-        </p>
+        <p className="mb-8 text-sm text-gray-500">Overview of your portfolio</p>
 
         <div className="grid gap-4 sm:grid-cols-3">
           {stats.map(({ label, value, icon: Icon, href }) => {
